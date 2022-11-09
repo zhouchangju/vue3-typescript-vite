@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    // 构建时可以设置为false，避免项目代码报错导致构建失败
+    "strict": false,
+    // 跳过第三方库的类型检查，不然Build会报错
+    "skipLibCheck": true,
+    // 避免any报错
+    "noImplicitAny":false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "Phaser"],
+  //   "typeRoots": [
+  //     "./node_modules/phaser/types"
+  // ],
+  // "types": [
+  //     "Phaser"
+  // ],
+    // "baseUrl": "./",    //未设置 "baseUrl" 时，不允许使用非相对路径。
+    "paths": {
+      //格式一定要写对符号*不能少不然找不到@或者没有代码提示
+      // "@/*": ["./*"],
+      // "@models/*": ["src/models/*"],
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.js"],
+
+}
